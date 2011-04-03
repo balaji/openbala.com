@@ -1,8 +1,58 @@
 <html>
 <head>
+<meta name="google-site-verification" content="1DlnlyHFafjRkO5eDjn3JcO6v9D1M2edwZFbmrOAgLk" />
 <title>openbala</title>
+<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('a').each(function() {
+	   var a = new RegExp('/' + window.location.host + '/');
+	   if(!a.test(this.href)) {
+		   $(this).click(function(event) {
+			   event.preventDefault();
+			   event.stopPropagation();
+			   window.open(this.href, '_blank');
+		   });
+	   }
+	});
+});
+</script>
+<style>
+@font-face {
+  font-family: Graublau;
+  src: url('/GraublauWebBold.otf');
+}
+
+.graublau {
+  font-family: Graublau;
+  font-size: 66px;
+  color:#a52a2a;
+  text-shadow: 1px 1px white, -1px -1px #444;
+}
+
+.smallerFont {
+  font-size: 40px;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+	
+}
+</style>
 </head>
 <body>
-<p>Hello, World</p>
+<p class="graublau">
+Hi, I'm Balaji Damodaran. I write software.
+<br/><br/>
+Connect: 
+<a href="http://blog.openbala.com">Blog</a>,
+<a href="http://twitter.com/openbala">Twitter</a>, 
+<a href="http://facebook.com/openbala">Facebook</a>,
+<a href="http://github.com/openbala">Github</a><br/>
+Content: 
+<a href="http://rummy.openbala.com">Rummy</a><br/>
+Contact: <a href="mailto:balaji@openbala.com">balaji@openbala.com</a><br/>
+</p>
 </body>
 </html>
